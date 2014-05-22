@@ -42,9 +42,11 @@ host    all             all             0.0.0.0/0               md5
 -- change the data directory
 mkdir -p /DATA/postgresqldata
 sudo chown -R postgres:postgres /DATA/postgresqldata
-su postgres
+sudo su postgres
 
 /usr/lib/postgresql/9.3/bin/initdb -D /DATA/postgresqldata
+
+exit
 
 sudo pico /etc/postgresql/9.3/main/postgresql.conf
 -- change
@@ -53,7 +55,10 @@ data_directory = '/DATA/postgresqldata/'
 sudo /etc/init.d/postgresql start
 sudo su postgres
 psql -d postgres -U postgres
-SHOW data_directory
+SHOW data_directory;
+
+\q
+exit
 
 
 /*************************************************************

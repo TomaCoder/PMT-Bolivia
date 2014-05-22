@@ -1,7 +1,7 @@
 /******************************************************************
    bolivia_activity
 
-   select * from bolivia_activity(32807);
+   select * from bolivia_activity(1);
 ******************************************************************/
 CREATE OR REPLACE FUNCTION bolivia_activity(activity_id integer) RETURNS SETOF pmt_json_result_type AS 
 $$

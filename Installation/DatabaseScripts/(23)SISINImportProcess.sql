@@ -411,7 +411,7 @@ CREATE TRIGGER upd_datos_sisin BEFORE INSERT ON datos_sisin
 
   Ejemplo de función para importar datos de CSV:
 
-  SELECT * FROM importar_datos_sisin('informacion_oap.csv');   
+  SELECT * FROM importar_datos_sisin('/DATA/informacion_oap.csv');   
   
 ******************************************************************/
 CREATE OR REPLACE FUNCTION importar_datos_sisin(ruta_csv text) 
@@ -629,7 +629,7 @@ INSERT INTO classification(taxonomy_id, name, created_by, updated_by) VALUES ((S
 INSERT INTO classification(taxonomy_id, name, created_by, updated_by) VALUES ((SELECT taxonomy_id FROM taxonomy WHERE name = 'Provincia'),'ANGEL SANDOVAL','Bolivia PMT Setup','Bolivia PMT Setup');
 
 -- Municipio
-INSERT INTO taxonomy(name, created_by, updated_by) VALUES ('Municiple','Bolivia PMT Setup','Bolivia PMT Setup');
+INSERT INTO taxonomy(name, created_by, updated_by) VALUES ('Municipio','Bolivia PMT Setup','Bolivia PMT Setup');
 INSERT INTO classification(taxonomy_id, name, created_by, updated_by) VALUES ((SELECT taxonomy_id FROM taxonomy WHERE name = 'Municipio'),'Multimunicipal','Bolivia PMT Setup','Bolivia PMT Setup');
 INSERT INTO classification(taxonomy_id, name, created_by, updated_by) VALUES ((SELECT taxonomy_id FROM taxonomy WHERE name = 'Municipio'),'San Ignacio (San I. de Velasco)','Bolivia PMT Setup','Bolivia PMT Setup');
 INSERT INTO classification(taxonomy_id, name, created_by, updated_by) VALUES ((SELECT taxonomy_id FROM taxonomy WHERE name = 'Municipio'),'El Alto de La Paz','Bolivia PMT Setup','Bolivia PMT Setup');
