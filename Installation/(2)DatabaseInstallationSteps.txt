@@ -1,0 +1,29 @@
+/************************************************
+Database Installation Steps
+************************************************/
+Create a database named PMT and run the following scripts in order:
+
+1. (1)PMTCreateDatabase.sql
+2. (2)LoadPMTSpatialData0.sql
+3. (3)LoadPMTSpatialData1.sql
+4. (4)LoadPMTSpatialData2.sql
+5. (5)LoadPMTSpatialData3.sql
+6. (6)LoadPMTSpatialData4.sql
+7. (7)LoadPMTSpatialData5.sql
+8. (8)LoadPMTSpatialData6.sql
+9. (9)LoadPMTSpatialData7.sql
+10. (10)LoadPMTSpatialData8.sql
+11. (11)LoadPMTSpatialData9.sql
+12. (12)LoadPMTSpatialData10.sql
+13. (13)LoadPMTSpatialData11.sql
+14. (14)LoadPMTSpatialData12.sql
+15. (15)LoadPMTSpatialData13.sql
+16. (16)LoadPMTSpatialData14.sql
+17. (17)LoadPMTSpatialData15.sql
+18. (18)LoadPMTSpatialData16.sql
+19. (19)LoadPMTSpatialData17.sql
+20. (20)PMTUpdateSpatialData.sql
+21. (21)PMTPerformanceTuning.sql
+22. (22)PMTPermissions.sql
+23. (23)SISINImportProcess.sql
+24. (24)PMTBoliviaCustomization.sql

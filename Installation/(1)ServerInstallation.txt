@@ -1,0 +1,74 @@
+/*************************************************************
+Postgres 9.3 Y PostGIS 2.1 Instalación Script
+**************************************************************/
+sudo apt-get update
+sudo apt-get -y upgrade 
+
+sudo wget http://anonscm.debian.org/loggerhead/pkg-postgresql/postgresql-common/trunk/download/head:/apt.postgresql.org.s-20130224224205-px3qyst90b3xp8zj-1/apt.postgresql.org.sh
+
+sudo chmod 777 apt.postgresql.org.sh
+--Note: if using 12.04 use:
+sudo ./apt.postgresql.org.sh precise
+--Note: if using 12.10 use
+--sudo ./apt.postgresql.org.sh quantal
+(hit enter)
+
+sudo apt-get install postgresql-9.3 postgresql-contrib-9.3 postgresql-9.3-postgis-2.1 postgresql-9.3-postgis-scripts -y
+
+
+sudo su postgres
+
+psql
+
+alter user postgres with password 'D4t4W4r3#';
+
+\q
+exit
+
+sudo /etc/init.d/postgresql stop
+
+--or VI or VIM or whatever editor
+sudo pico /etc/postgresql/9.3/main/postgresql.conf
+
+--from this 
+listen_addresses = ‘localhost’  
+--to 
+listen_addresses = ‘*’  
+
+sudo pico /etc/postgresql/9.3/main/pg_hba.conf
+--add this line:
+host    all             all             0.0.0.0/0               md5
+
+-- change the data directory
+mkdir -p /DATA/postgresqldata
+sudo chown -R postgres:postgres /DATA/postgresqldata
+su postgres
+
+/usr/lib/postgresql/9.3/bin/initdb -D /DATA/postgresqldata
+
+sudo pico /etc/postgresql/9.3/main/postgresql.conf
+-- change
+data_directory = '/DATA/postgresqldata/'
+
+sudo /etc/init.d/postgresql start
+sudo su postgres
+psql -d postgres -U postgres
+SHOW data_directory
+
+
+/*************************************************************
+Apache 2 y PHP5 Instalación Script
+**************************************************************/
+sudo apt-get install apache2
+sudo apt-get install php5
+sudo apt-get install libapache2-mod-php5
+sudo apt-get install php5-pgsql
+sudo apt-get install php5-curl
+sudo /etc/init.d/apache2 restart
+
+-- here is what I am changing on the server:
+sudo pico /etc/php5/apache2/php.ini
+-- Set "session.cookie_httponly"  option to "True"
+-- session.cookie_httponly = True;
+
+sudo /etc/init.d/apache2 restart
