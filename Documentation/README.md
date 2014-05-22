@@ -1,7 +1,6 @@
 ﻿PMT Database Function Reference
 ===============================
 
-
 ##### Contents
 
 [pmt\_activate\_activity](#activate_activity)

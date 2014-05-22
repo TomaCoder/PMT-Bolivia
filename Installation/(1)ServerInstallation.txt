@@ -20,7 +20,7 @@ sudo su postgres
 
 psql
 
-alter user postgres with password 'D4t4W4r3#';
+alter user postgres with password 'password';
 
 \q
 exit
