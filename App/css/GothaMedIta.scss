@@ -1,0 +1,11 @@
+/* Webfont: Gotham-MediumItalic */@font-face {
+    font-family: 'Gotham-MediumItalic';
+    font-style: 'normal';
+    font-weight: 'normal';
+    src: url('fonts/GothaMedIta.eot'); /* IE9 Compat Modes */
+    src: url('fonts/GothaMedIta.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/GothaMedIta.woff') format('woff'), /* Modern Browsers */
+         url('fonts/GothaMedIta.svg#Gotham-MediumItalic') format('svg'), /* Legacy iOS */
+         url('fonts/GothaMedIta.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+

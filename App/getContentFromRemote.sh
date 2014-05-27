@@ -1,0 +1,1 @@
+git subtree pull --prefix=content --squash content master

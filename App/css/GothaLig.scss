@@ -1,0 +1,11 @@
+/* Webfont: Gotham-Light */@font-face {
+    font-family: 'Gotham-Light';
+    font-style: 'normal';
+    font-weight: 'normal';
+    src: url('fonts/GothaLig.eot'); /* IE9 Compat Modes */
+    src: url('fonts/GothaLig.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/GothaLig.woff') format('woff'), /* Modern Browsers */
+         url('fonts/GothaLig.svg#Gotham-Light') format('svg'), /* Legacy iOS */
+         url('fonts/GothaLig.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+

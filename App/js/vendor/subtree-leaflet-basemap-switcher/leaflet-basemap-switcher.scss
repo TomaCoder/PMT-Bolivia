@@ -1,0 +1,32 @@
+
+
+// Narrow By item at node level 1 (i.e., children)
+li.checkbox-list-item {
+  list-style: none;
+  background-image: url(../img/checkbox_10x10.png);
+  background-repeat: no-repeat;
+  background-position: left 3px;
+  font-size: 11px;
+  font-family: 'DIN-Regular';
+  line-height: normal;
+  padding: 3px 0 4px 0;
+  
+  // item label
+  div.label {
+    padding-left:20px;
+    text-transform: capitalize;
+    position: relative;
+    top: 0.1em;
+  }  
+}
+
+li.checkbox-list-item.list-level-1:first-child {
+  padding-top: 0px;
+  background-position: left top;
+} 
+
+// Selected/checked item at list-level 1
+li.checkbox-list-item.list-level-1.selected {
+  background-image: url(../img/checkbox_10x10_checked.png);
+}
+
