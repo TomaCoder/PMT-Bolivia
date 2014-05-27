@@ -22,8 +22,10 @@ Create a database named PMT and run the following scripts in order:
 17. (17)LoadPMTSpatialData15.sql
 18. (18)LoadPMTSpatialData16.sql
 19. (19)LoadPMTSpatialData17.sql
-20. (20)PMTUpdateSpatialData.sql
-21. (21)PMTPerformanceTuning.sql
-22. (22)PMTPermissions.sql
-23. (23)SISINImportProcess.sql
-24. (24)PMTBoliviaCustomization.sql
+20. (20)LoadPMTSpatialData18.sql
+21. (21)LoadPMTSpatialData19.sql
+22. (22)PMTUpdateSpatialData.sql
+23. (23)PMTPerformanceTuning.sql
+24. (24)PMTPermissions.sql
+25. (25)SISINImportProcess.sql
+26. (26)PMTBoliviaCustomization.sql
