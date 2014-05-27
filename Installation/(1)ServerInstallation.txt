@@ -77,3 +77,11 @@ sudo pico /etc/php5/apache2/php.ini
 -- session.cookie_httponly = True;
 
 sudo /etc/init.d/apache2 restart
+
+-- add user that is publishing application to server
+sudo chgrp www-data /var/www
+sudo chmod 775 /var/www
+sudo chmod g+s /var/www
+sudo useradd -G www-data [username]
+
+sudo /etc/init.d/apache2 restart
