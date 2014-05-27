@@ -1,0 +1,11 @@
+/* Webfont: Gotham-Bold */
+@font-face {
+    font-family: 'Gotham-Bold';
+    font-style: 'normal';
+    font-weight: 'bold';
+    src: url('fonts/GothaBol.eot'); /* IE9 Compat Modes */
+    src: url('fonts/GothaBol.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/GothaBol.woff') format('woff'), /* Modern Browsers */
+         url('fonts/GothaBol.svg#Gotham-Bold') format('svg'), /* Legacy iOS */
+         url('fonts/GothaBol.ttf') format('truetype'); /* Safari, Android, iOS */
+}

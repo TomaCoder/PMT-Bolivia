@@ -1,0 +1,136 @@
+@font-face {
+  font-family: 'icomoon';
+  src:url('fonts/icomoon.eot');
+  src:url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.woff') format('woff'),
+    url('fonts/icomoon.ttf') format('truetype'),
+    url('fonts/icomoon.svg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+  font-family: 'icomoon';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.icon-tool2-01, .icon-tool-01, .icon-tool-01-01, .icon-table-01, .icon-plusfolder-01, .icon-plus-01, .icon-person-01, .icon-panel-01, .icon-page-01, .icon-minuscir-01, .icon-map-01, .icon-mag_glassplus-01, .icon-mag_glassminus-01, .icon-mag_glass-01, .icon-info-01, .icon-icons, .icon-house, .icon-house-01, .icon-folder_map, .icon-folder_map-01, .icon-disc-01, .icon-conecc-01, .icon-close-01, .icon-circle, .icon-calendar-01, .icon-bubble-01, .icon-arrrownext-01, .icon-arrows-01, .icon-arrowdown-01, .icon-arrowback-01, .icon-arrow_up_table, .icon-pencil_edit {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.icon-tool2-01:before {
+  content: "\e000";
+}
+.icon-tool-01:before {
+  content: "\e001";
+}
+.icon-tool-01-01:before {
+  content: "\e002";
+}
+.icon-table-01:before {
+  content: "\e003";
+}
+.icon-plusfolder-01:before {
+  content: "\e004";
+}
+.icon-plus-01:before {
+  content: "\e005";
+}
+.icon-person-01:before {
+  content: "\e006";
+}
+.icon-panel-01:before {
+  content: "\e008";
+}
+.icon-page-01:before {
+  content: "\e009";
+}
+.icon-minuscir-01:before {
+  content: "\e00a";
+}
+.icon-map-01:before {
+  content: "\e00b";
+}
+.icon-mag_glassplus-01:before {
+  content: "\e00c";
+}
+.icon-mag_glassminus-01:before {
+  content: "\e00d";
+}
+.icon-mag_glass-01:before {
+  content: "\e00e";
+}
+.icon-info-01:before {
+  content: "\e00f";
+}
+.icon-icons:before {
+  content: "\e010";
+}
+.icon-house:before {
+  content: "\e011";
+}
+.icon-house-01:before {
+  content: "\e012";
+}
+.icon-folder_map:before {
+  content: "\e013";
+}
+.icon-folder_map-01:before {
+  content: "\e014";
+}
+.icon-disc-01:before {
+  content: "\e015";
+}
+.icon-conecc-01:before {
+  content: "\e016";
+}
+.icon-close-01:before {
+  content: "\e017";
+}
+.icon-circle:before {
+  content: "\e018";
+}
+.icon-calendar-01:before {
+  content: "\e019";
+}
+.icon-bubble-01:before {
+  content: "\e01a";
+}
+.icon-arrrownext-01:before {
+  content: "\e01b";
+}
+.icon-arrows-01:before {
+  content: "\e01c";
+}
+.icon-arrowdown-01:before {
+  content: "\e01d";
+}
+.icon-arrowback-01:before {
+  content: "\e01e";
+}
+.icon-arrow_up_table:before {
+  content: "\e01f";
+}
+.icon-pencil_edit:before {
+  content: "\e007";
+}

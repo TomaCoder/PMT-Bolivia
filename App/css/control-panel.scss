@@ -1,0 +1,366 @@
+#controlPanel {
+  position: absolute;
+  width: 300px;
+  left: 25px;
+  top: 20px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  border-color: rgb(222,222,222);
+  border-width: 1px;
+  border-style: solid;
+  overflow: hidden;
+  z-index: 100;
+  box-shadow: 0 0 8px #888888;
+  -moz-box-shadow: 0 0 8px #888888;
+  -webkit-box-shadow: 0 0 8px #888888;
+  
+    > header {
+      font-family: 'Gotham-Bold';
+      font-size: 9px;
+      line-height: 33px;
+
+      padding-right: 14px;
+      text-align: right;
+      background: #ebebeb; 
+      
+      cursor: pointer;
+      
+      span {
+        padding-right: 14px;
+        text-align: right;
+        color: #949494;
+        background: url(../img/collapse_down.png) no-repeat right 0.3em;
+      }
+      
+      &.opened {
+         span {
+          background-image: url(../img/collapse_up.png);
+        }
+      }
+    }
+    
+    li {
+      list-style: none;
+    }
+    
+}
+
+#controls {
+  
+  .data-source-control-wrapper {
+    display:none;
+  }
+  
+  .data-control-section {
+    margin: 0 0;
+    border-bottom: solid 1px #d0d0ce;
+    line-height: 28px;
+    font-family: 'Gotham-Book';
+    font-size: 13px;
+    color: #898989;
+    background-color: #FFF;
+    text-transform: uppercase;
+    
+    div.section-header {
+      line-height: 30px;
+      margin: 6px 16px;
+      background: url(../img/collapse_down.png) no-repeat right center;
+      cursor: pointer;
+      
+      &.opened {
+        background-image: url(../img/collapse_up.png)
+      }
+    }
+    
+    div.selection-list-wrapper {
+      
+      display:none;
+
+       
+      p.allNone {
+       margin-top: -10px;
+       margin-bottom: 10px;
+       margin-left:15px;
+       margin-right: 15px;
+       line-height: normal;
+       font-size: 10px;
+       cursor:pointer;
+       text-decoration: underline;
+      }
+      ul.selection-list {
+        overflow-y: auto;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        
+        > li.selection-item {
+          font-family: 'Gotham-Book';
+          font-size: 11px;
+          line-height: 24px;
+          cursor: pointer;
+          padding: 0 0 10px 0;
+          position: relative;
+          
+          &.selected {
+            
+            > div.label {
+              background-image: url(../img/checkbox_new_checked.png);
+            }
+          }
+          
+          &.other-item {
+            padding-bottom: 2px;
+            margin-right: 10px;
+            
+            .slide-toggle {
+              position: absolute;
+              right: 0;
+              top: 0;
+              height: 16px;
+              background: url(../img/collapse_down.png) no-repeat right center;
+              width: 10px;
+              
+              &.opened {
+                background-image: url(../img/collapse_up.png);
+                
+              }
+            } 
+             
+          }
+          
+           > div.swatch {
+              width: 10px;
+              height: 10px;
+              margin: 3px 10px 0 33px;
+              -webkit-border-radius: 10px;
+              border-radius: 10px;
+              display:none;
+            }
+            
+            > div.label {
+              background-image: url(../img/checkbox_new.png);
+              background-repeat: no-repeat;
+              background-position: 3px 0px;
+              line-height: 1.5em;
+              padding-left: 45px;
+              margin: 0 0px 0 8px;
+              text-transform: capitalize;
+            }
+        }
+        
+        > li.other-items-list {
+               
+          > ul {
+            
+            margin: 0 5px 0 31px;
+            padding-top: 13px;
+            display:none;
+            
+            > li {
+              font-size: 11px;
+              line-height: 24px;
+              cursor: pointer;
+              padding: 0 0 10px 0;
+              
+              &.selected {
+              
+                > div.label {
+                  background-image: url(../img/checkbox_new_checked.png);
+                }
+              }
+              > div.label {
+                background-image: url(../img/checkbox_new.png);
+                background-repeat: no-repeat;
+                background-position: 0px 0px;
+                line-height: 1.5em;
+                padding-left: 35px;
+                text-transform: capitalize;
+              }
+            }
+          } 
+        } 
+      }
+        
+        
+    }
+    
+  }
+}
+
+#viewControl {
+  background-color:#fff;  
+  padding:5px 10px;
+  font-size: 11px;
+  color: #aaa;  
+  font-family: 'Gotham-Bold';
+  border-bottom: solid 1px #d0d0ce;
+  height:20px;
+  cursor: pointer;
+}
+.viewControl_text {
+  color: #aaa;
+  float: left;
+  padding-top:1px;
+}
+.VCactive {
+  color: #636363;
+}
+
+#viewControl_toggle {
+    background: url('../img/viewToggleRight.png') no-repeat;
+    width:35px;
+    height: 15px;
+    float:left;
+    margin: 0px 8px 0px 8px;
+}
+#viewControl_toggle.donor {
+  background-image: url('../img/viewToggleLeft.png')
+}
+
+#mapsControl {
+  
+  &.data-control-section {
+    
+    display:block;
+    
+    div.contents-wrapper {
+      
+      display:none;
+      overflow-y: auto;
+      
+      header {
+        margin: 0 0 0px 18px;
+        font-family: 'Gotham-Book';
+        font-size: 11px;
+        color: rgb(68,68,69);
+      }
+    }
+    ul.basemap-list {
+      
+      margin: 0 10px 0 10px;
+      
+      > li {
+        
+        display:inline-block;
+        margin-right: 9px;
+        box-sizing: border-box;
+        width: 57px;
+        height: 72px;
+        border: 1px solid #fff;
+        cursor: pointer;
+        
+        &.selected {
+          border: 2px solid rgb(236,119,33);
+        }
+        
+         > div {
+            width: 100%;
+            height: 100%;
+            
+           &.basemap-imagery {
+             background: url(../img/tnail_satellite.png) no-repeat;
+           }
+           &.basemap-streets {
+             background: url(../img/tnail_streets.png) no-repeat;
+           }
+           &.basemap-terrain {
+             background: url(../img/tnail_terrain.png) no-repeat;
+           }
+           &.basemap-night {
+             background: url(../img/tnail_darkCanvas.png) no-repeat;
+           }
+           
+         }
+         
+         
+      }
+    }
+    
+    ul.contextual-layers-list {
+      margin:0 0 10px 10px;
+      
+      li {
+        background-position: 0 3px;
+        padding-left: 19px;
+        font-family: 'Gotham-Book';
+        font-size: 11px;
+        line-height: 24px;
+        background: url(../img/checkbox_new.png) no-repeat left 4px;
+      
+        &.selected {
+          background-image: url(../img/checkbox_new_checked.png);
+        }
+      }
+      
+      
+    }
+  }
+}
+
+
+#chartsControl {
+  
+  &.data-control-section {
+    
+    display:block;
+    
+    div.contents-wrapper {
+      
+      display:none;
+      overflow-y: auto;
+      
+      div.chart-wrapper {
+        height: 200px;
+        width: 200px;
+        margin: 0 auto;
+        overflow:hidden;
+        position:relative;
+        
+        div.wall-to-wall {
+          background-color: #fff;
+          z-index: 10;
+          display:none;
+          
+          div.loading-spinner {
+            background: url(..img/loading.gif) no-repeat center center;
+            width: 66px;
+            height: 66px;
+          }
+        
+        }
+        
+        .label {
+          width: 100px;
+          height: 2em;
+          font-size: 11px;
+          line-height: 1.25em;
+          text-align: center;
+        }
+      }
+      
+      div.chart-caption {
+        
+        font-size: 10px;
+        padding-bottom: 10px;
+        margin: 5px auto 20px;
+        width: 190px;
+        border-bottom: 1px solid #ccc;
+        min-height: 47px;
+        
+        .swatch {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          line-height: 1.25em;
+        }
+        
+        p {
+          float: left;
+          margin:0 0 0 5px;
+          width: 175px;
+          line-height: 1.25em;
+        }
+      }
+    }
+  }
+}

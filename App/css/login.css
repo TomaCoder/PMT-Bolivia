@@ -1,0 +1,150 @@
+#wrapperLogin {
+  width: 255px;
+  height: 199px;
+  background-color: #ffffff;
+  padding: 20px;
+  font-size: 1em;
+  position: absolute;
+  top: 38px;
+  right: 20px;
+  z-index: 2000;
+  display: none;
+}
+#wrapperLogin > input.txtfield {
+  background-color: #f8f8f8;
+  height: 25px;
+  padding: 10px 15px;
+  border: 0px solid #f8f8f8;
+  margin-bottom: 15px;
+  width: 180px;
+  border-radius: 2px;
+  float: left;
+  color: #b2b2b2;
+}
+input.login_forgot {
+  background-color: #f8f8f8;
+  height: 23px;
+  padding: 10px 15px;
+  border: 0px solid #f8f8f8;
+  margin-bottom: 15px;
+  width: 220px;
+  border-radius: 2px;
+  float: left;
+  color: #b2b2b2;
+}
+input.login_forgot.long {
+    width:320px;
+}
+div.login_forgot_submit {
+  width: 100px;
+  padding:10px 0px;
+  float:left;
+  background-color: #ec7721;
+  color: #ffffff;
+  font-family: 'Gotham-Bold';
+  cursor: pointer;
+  text-align: center;
+  border-radius: 2px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+}
+#wrapperLogin > div.user {
+  background: url('../img/login_user.png') no-repeat;
+  width: 45px;
+  height:45px;
+  float:left;
+  clear: both;
+  margin-bottom: 15px;
+}
+#wrapperLogin > div.pass {
+  background: url('../img/login_pass.png') no-repeat;
+  width: 45px;
+  height:45px;
+  float:left;
+  
+}
+ #uxLogin_submit {
+  width: 254px;
+  padding:10px 0px;
+  float:left;
+  background-color: #ec7721;
+  color: #ffffff;
+  font-family: 'Gotham-Bold';
+  cursor: pointer;
+  text-align: center;
+  border-radius: 2px;
+  margin-bottom: 15px;
+}
+ #uxLogin_submit:hover {
+  background-color: #cccccc;
+  color: #ec7721;
+}
+div.sub_notes  {
+  float: left;
+  font-size: 0.7em;
+  color: #e87352;
+  font-family: 'Gotham-Book';
+  cursor: pointer;
+}	
+#wrapperLogin > div.right {
+  float: right;
+}
+
+#uploadIATI {
+    background-color: #ea7820;
+    right: 150px;
+    position:absolute;
+    top:43px;
+    width: 89px;
+    padding: 4px 25px 2px 8px;
+    font-family: 'Gotham-Bold';
+    font-size: 13px;
+    color:#fff;
+    z-index:2;
+    background-image: url('../img/upload_iati.png');
+    background-repeat: no-repeat;
+    background-position: 104px 9px;
+    margin-top:-37px;
+    cursor: pointer;
+    
+}
+#edit_sector {
+    background-color: #ea7820;
+    right: 280px;
+    position:absolute;
+    top:43px;
+    padding: 4px 8px 2px 8px;
+    font-family: 'Gotham-Bold';
+    font-size: 13px;
+    color:#fff;
+    z-index:2;
+    margin-top:-37px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.upload_form {
+  z-index: 1000;
+  width: 360px;
+  height: 330px;
+  background-color: #ffffff;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: absolute;
+  top:80px;
+  padding: 30px 20px;
+  margin-left: 50%;
+  left: -200px;
+  box-shadow: 0 0 8px #888888;
+  -moz-box-shadow: 0 0 8px #888888;
+  -webkit-box-shadow: 0 0 8px #888888;
+}
+.upload_close {
+  position: absolute;
+  right: 5px;
+  width: 16px;
+  height: 16px;
+  z-index: 2000;
+  cursor: pointer;
+  top: 5px;
+  background: url("../img/upload_close.png");
+}

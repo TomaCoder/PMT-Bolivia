@@ -1,0 +1,30 @@
+
+.sprite-detail_closer{
+	background: url(../img/closer_000_16x15.png) no-repeat;
+	background-position: left center;
+	height: 15px;
+	width: 16px;
+} 
+
+.sprite-detail_collapser_up{
+	background-image: url(../img/collapse_up.png);
+	background-repeat: no-repeat;
+	background-position: left center; 
+}
+.sprite-detail_collapser_down{ 
+	background-image: url(../img/collapse_down.png);
+		background-repeat: no-repeat;
+	background-position: left center; 
+ }
+
+.sprite-pagerNext { 
+	background: url(../img/pagerNext.png) no-repeat;
+	background-position: 5px center;
+	cursor:pointer} 
+
+.sprite-pagerPrev { 
+	background: url(../img/pagerPrev.png) no-repeat;
+	background-position: 5px center;
+	cursor:pointer } 
+	 
+

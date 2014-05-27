@@ -1,0 +1,272 @@
+#mmmap {
+  background-color: #F9FAFB; 
+  width:960px;
+  height:430px;
+}
+.mmcountry {
+  fill: #dfdfdf;
+  stroke: #d4d4cd;
+  stroke-width: .5px;
+  stroke-linejoin: round;
+}
+
+.countryHover {
+  fill: #83A41C;
+}
+
+.countryHover:hover {
+  fill: #9FBC00;
+}
+
+.mminfo {
+  color: #222; 
+  font-size: 1.2em;
+  width: 170px;
+  height: 64px;
+  padding: 12px 15px 13px 15px;
+  background: url('../img/bubble-light.png');
+  position: absolute;
+  line-height: 26px;
+}
+.mminfo.bottom {
+	background: url('../img/bubble2-light.png');
+	padding: 22px 15px 3px 15px;
+}
+
+.mminfo:hover {
+	opacity:0.9;
+	filter:alpha(opacity=80);
+	cursor: pointer;	
+}
+.mmtitle {
+	font-family: 'Gotham-Bold';
+	font-size: 1.2em;
+	color: #81a33b;	
+	clear: both;
+}
+.mmactivities {
+	font-family: 'Gotham-Book';
+	font-size: 0.75em;
+	color: #333333;	
+	padding-top: 3px;
+	float: left;
+}
+.mmimg {
+	float:left;
+	padding: 0px 0px 0px 10px;
+}
+
+#introSearch {
+	height: 86px;
+	width:960px;
+}
+
+#introTitle {
+	height:60px;
+	line-height: 20px;	
+	padding-top: 25px;
+	width: 50%;
+	float: left;	
+}
+span.toptitle {
+	 font-family: 'Gotham-Bold';
+	 font-size:1.6em;
+	 color: #686969;
+	 margin: 0px;
+}
+span.bottomtitle {
+	 font-family: 'Gotham-Book';
+	 font-size:1.4em;
+	 color: #686969;
+	 margin: 0px;
+}
+.restrictHeader {
+	width:100%;
+	background-color:#ffffff;
+	position:absolute;
+	top:0px;
+	height:50px;
+}
+.restrictFront {
+	width:960px;
+	margin-left:50%;
+	left:-480px;
+	position:absolute;
+	top:0px;	
+}
+.extendlocation {
+	width: 620px;
+}
+#restrictWidth {
+	margin-left:50%;
+	left:-480px;
+	position:absolute;
+	background-color:#F9FAFB;
+	top:50px;
+}
+#searchBox {
+	height:30px;
+	line-height: 25px;	
+	padding-top: 30px;
+	width: 50%;
+	float: left;	
+}
+#uxSearch {
+	float: right;
+	-moz-border-radius:20px; /* Firefox */
+	-webkit-border-radius: 20px; /* Safari, Chrome */
+	-khtml-border-radius: 20px; /* KHTML */
+	border-radius: 20px;
+	font-size: 14px;
+	font-family: Arial;
+	font-style: italic;
+	padding: 8px 50px 8px 15px;
+	width: 260px;
+	border: solid 1px #cccccc;
+	outline: none;
+}
+.searchButton {
+	background: url('../img/search.png');
+	float: right;
+	width: 19px;
+	height: 18px;
+	z-index: 10;
+	right: 82px;
+	top: 39px;
+	position: absolute;	
+	cursor: pointer;
+}
+.hr {
+	width: 351px;
+	height: 3px;
+	float: left;
+	padding: 40px 15px;
+}
+
+.sectionHead td {
+	text-align:center; 
+    vertical-align:middle;
+}
+
+.qsHeader {
+	float: center;
+	font-family: 'Gotham-Book';
+	font-size: 1.3em;
+	color: #666666;	
+	padding: 30px 10px 10px 10px;
+}
+#frontQuickStats {
+	background-color:#fff;
+	border-top: 1px solid #E7E7E7;
+	border-bottom: 1px solid #E7E7E7;
+}
+
+#qslead {
+	height: 90px;
+	padding-bottom: 20px;	
+}
+#qsStats {
+	height: 280px;
+	padding-bottom: 35px;
+}
+
+#donut1 {
+	width: 300px;
+	height: 300px;
+	padding-left: 20px;	
+	float: left;
+}
+.qsContent {
+	width: 443px;
+	height: 300px;
+	padding-left: 40px;	
+	float: left;
+	color: #4d4b4b;
+	font-family: 'Gotham-Light';
+	font-size: 1.2em;	
+}
+#percentage{
+	position: absolute;
+	top: 720px;
+	left: 10px;
+	width: 320px;
+	z-index: 10;
+	em: 1em;
+	color: #4d4b4b;
+	font-family: 'Gotham-Book';
+	text-align: center;	
+}
+.perctop {
+	color: #d66c27;
+	font-family: 'Gotham-Bold';
+	font-size: 3em;
+}
+.qsTitle {
+	color: #d66c27;
+	font-family: 'Gotham-Bold';
+	font-size: 3em;	
+}
+.qsicon {
+	/*margin-top: -12px;*/	
+}
+
+.qstatsTopic
+{
+	width: 100%;
+	height: 26px;
+	padding-left: 20px;
+	padding-top:8px;
+	background-color: #ececec;
+	color:#444037;
+	font-size:15px;
+}
+
+.qstd {
+	vertical-align:middle;
+	text-align:left;
+	padding:8px;
+}
+
+.qsDesc {
+	font-size:15px;
+}
+#frontInTheNews {
+	background-color:#F9FAFB;
+}
+.qsnewsContainer {
+	width:900px;
+	padding-left:20px;
+}
+
+.qsnewsPicture {
+   padding:5px;
+   border:1px solid #ececec;
+   border-radius:3px;
+   background-color:#fff;
+   overflow:hidden;
+}
+
+.qsnewsAll {
+	text-align: right;
+	padding:30px;
+}
+.qsnewsAll a {
+	font-size: 18px;
+	font-family: 'Gotham-Book';
+	color: #ed7722;
+	text-decoration:none;
+}
+
+.footerCopy {
+	text-align: left;
+	padding-bottom: 50px;
+	padding-top:10px;
+	padding-left:5px;
+	border-top: 1px solid #E7E7E7;
+}
+
+.footerCopy p {
+	font-family: 'Gotham-Book';
+	font-size: 11px;
+	color: #4d4b4b;
+}

@@ -1,0 +1,87 @@
+#wmsLegend {
+  position: absolute;
+  width: 200px;
+  max-height: 300px;
+  overflow-y: auto;
+  right: 50px;
+  top: 100px;
+  background-color: #FFF;
+
+}
+
+
+.contextual-layers-list {
+  
+}
+
+// Narrow By item at node level 1 (i.e., children)
+li.checkbox-list-item.list-level-1 {
+  list-style: none;
+  background-image: url(../img/checkbox_10x10.png);
+  background-repeat: no-repeat;
+  background-position: left 3px;
+  font-size: 11px;
+  font-family: 'DIN-Regular';
+  line-height: normal;
+  padding: 3px 0 4px 0;
+  
+  // item label
+  div {
+    padding-left:20px;
+    text-transform: capitalize;
+    position: relative;
+    top: 0.1em;
+  }  
+}
+
+li.checkbox-list-item.list-level-1:first-child {
+  padding-top: 0px;
+  background-position: left top;
+} 
+
+// Selected/checked item at list-level 1
+li.checkbox-list-item.list-level-1.selected {
+  background-image: url(../img/checkbox_10x10_checked.png);
+}
+
+div.wms-legend-wrapper {
+  padding: 10px;
+}
+
+div.wms-legend-layer {
+  
+  margin-bottom: 12px;
+  
+  .layer-header {
+    margin-bottom: 4px;
+  }
+  
+}
+
+li.layer-item {
+
+    list-style: none;
+    margin-bottom: 6px;
+
+  div.swatch {
+    margin-right: 4px;
+    width: 15px;
+    height: 15px;
+    
+    > img {
+      width: 15px;
+      height: 15px;
+    }
+  }
+  
+  div.label {
+    line-height: 15px;
+    font-size: 10px;
+    position: relative;
+    top: .2em;
+  }
+}
+
+.cloak {
+  display:none;
+}

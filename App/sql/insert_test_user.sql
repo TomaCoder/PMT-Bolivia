@@ -1,0 +1,1 @@
+insert into "user" VALUES(nextval('user_user_id_seq'), 'testuser','testuser','testuser','testuser@spatialdev.com','password',true,0,'Grant',now(),'',now());

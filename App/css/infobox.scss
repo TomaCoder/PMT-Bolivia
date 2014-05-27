@@ -1,0 +1,93 @@
+#infoBox {
+  position: absolute;
+  right: 20px;
+  top: 122px;
+  width: 225px;
+  background-color: #ffffff;
+  display: none;
+  z-index: 100;
+  
+  > header {
+    font-family: 'Gotham-Bold';
+    font-size: 9px;
+    line-height: 33px;
+    text-align: right;
+    color: #949494;
+    background-color: #ebebeb;
+    cursor: pointer;
+    
+    > div.close {
+        margin-right: 10px;
+        width:15px;
+        height:15px;
+        line-height: inherit;
+      }
+      
+    > span {
+        float: left;
+        font-size: 9px;
+        padding-left: 10px;
+      }
+  }
+  
+  footer {
+  font-family: 'Gotham-Bold';
+  font-size: 9px;
+  color: #949494;
+  background-color: #9fbc2e;
+  cursor: pointer;
+  padding: 15px 0px;
+  height: 28px;
+  z-index: 101;
+  
+  > div {
+    width: 28px;
+    height: 28px;
+    
+    &:first-child{
+      background: url('../img/infoBox_left.png') no-repeat;
+      
+      float: left;
+    }
+    
+    &:last-child {
+      background: url('../img/infoBox_right.png') no-repeat;
+      float: right;
+    }
+  }
+
+
+  }
+}
+
+.infobox-content-wrapper {
+  height: 275px;
+  overflow-y: auto;
+}
+
+.infobox-content {
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 15px;
+  font-family: 'Gotham-Book';
+  font-size: 10px;
+  color: #494949;
+  line-height: 15px;
+
+  .infoBoxName {
+    font-family: 'Gotham-Bold';
+    font-size: 12px;
+    padding-bottom: 10px;
+    }
+    
+  .infoBoxDesc {
+    font-family: 'Gotham-Book';
+    padding-bottom: 10px;
+    font-size: 12px;
+    
+    .infoBoxDescTitle {
+      font-family: 'Gotham-Bold';
+      }
+    }
+}
+

@@ -1,0 +1,341 @@
+$headerHeight: 38px;
+$bgcolor1: #F9FAFB;
+$footerHeight: 40px;
+$tabWrapperHeight: 40px;
+
+$orangeColor: #EC7721;
+
+@import "normalize";
+@import "boilerplate";
+@import "GothaBol";
+@import "GothaBoo";
+@import "GothaMed";
+@import "icomoon";
+
+
+body {
+min-height: 600px;
+min-width: 960px;
+position: absolute;
+bottom: 0;
+top: 0;
+left: 0;
+right: 0;
+overflow-y: auto; 
+font-family: 'Gotham-Book';
+}
+
+#wrapper0 {
+  position: absolute;
+  top:$headerHeight;
+  bottom: $footerHeight;
+  left:0;
+  right:0;
+  min-height: 522px;
+  min-width: inherit;
+}
+
+#mapListTabs {
+  height: $tabWrapperHeight;
+  
+  ul {
+    height: 32px;
+    border-bottom: 2px solid #E2DEDF;
+    background-color: #E9E9E9;
+    
+    li {
+      
+      list-style:none;
+      display:inline-block;
+      cursor: pointer;
+      
+      border: 1px solid #E2DEDF;
+      border-radius: 5px;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+      background-color: #E9E9E9;
+      margin: 5px 4px 0;
+      border-bottom: none;
+      box-sizing: border-box;
+      height: 29px;
+      line-height: 33px;
+      padding: 0px 25px 0 50px;
+      font-family: 'Gotham-Book';
+      font-size: 13px;
+      color: #ADADAF;
+      cursor: pointer;
+    }
+    
+    li:first-child {
+    margin-left: 30px;
+    }
+    
+    #mapViewTab {
+      
+      background: white url(../img/iconMapViewInactive.png) no-repeat 22px 8px;
+      
+      &.active {
+        background-image: url(../img/iconMapView.png);
+        color: $orangeColor;
+      }
+    }
+    
+    #listViewTab {
+      
+      background: white url(../img/iconListViewInactive.png) no-repeat 22px 9px;
+      
+      &.active {
+        background-image: url(../img/iconListView.png);
+        color: $orangeColor;
+      }
+    }
+    
+  }
+  
+}
+
+#tabFoot {
+  background-color: #F9FAFB;
+  border-bottom: 2px solid #E2DEDF;
+  height: 4px;
+  
+}
+
+#viewContent {
+   position: absolute;
+    top:$tabWrapperHeight;
+    bottom:0;
+    left:0;
+    right:0;
+  .tab-content {
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background-color: #FFF;
+  }
+  
+  #mapView {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+}
+
+#appBlocker {
+  
+  background-color: rgba(51,51,51, 0.5);
+  z-index: 1000;
+
+}
+
+#onLoadSpinner {
+  
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+  border: solid 1px #666;
+  background-color: #eee;
+  color: #636363;
+  font-family: 'Gotham-Bold';
+  font-size: 12px;
+  text-align: center;
+  box-shadow: 0 0 8px #888888;
+  -moz-box-shadow: 0 0 8px #888888;
+  -webkit-box-shadow: 0 0 8px #888888;
+  
+  p {
+    margin: 0 0 1em;
+  }
+}
+
+#wmsLegend {
+  
+  min-width: 155px;
+  position: absolute;
+  bottom: 28px;
+  right: 20px;
+  z-index: 10;
+background-color: #fff;
+display: none;
+
+  > header {
+    line-height: 22px;
+    background-color: #E96B1D;
+    font-family: 'Gotham-Bold';
+    font-size: 13px;
+    cursor: pointer;
+    color: #fff;
+    
+    > div {
+      margin: 0 9px;
+    }
+  }
+  
+  .wms-legend-wrapper {
+    padding: 5px 9px 9px;
+    
+    .legend-header {
+      font-family: 'Gotham-Book';
+    }
+  }
+}
+
+#uxLogin_submit {
+  border:1px solid #333333;
+  padding: 3px;
+  background-color:#666666;
+  color:#ffffff;
+  margin-top:5px;
+  width: 60px;
+  text-align: center;
+}
+// OVERRIDES
+.boliviaLocations{
+  
+  &.q-marker-cluster  {
+  
+    > div {
+      background-color: #FFFFFF;
+      
+      > span {
+        color: #000000
+      }
+    }
+  }
+  
+  &.q-marker-cluster-single {
+     > div {
+      background-color: #FFFFFF;
+      
+      > span {
+        color: #000000
+      }
+    }
+  }
+}
+
+// Color changes for World Bank clusters
+.wbLocations{
+  
+  &.q-marker-cluster  {
+  
+    > div {
+      background-color: #000000;
+      
+      > span {
+        color: #FFFFFF
+      }
+    }
+  }
+  
+  &.q-marker-cluster-single {
+     > div {
+      background-color: #000000;
+      
+      > span {
+        color: #FFFFFF
+      }
+    }
+  }
+}
+
+.leaflet-container .leaflet-control-zoom {
+margin-top: 20px;
+background-color: rgba(201, 201, 201, 0.8);
+}
+
+.leaflet-control-container .leaflet-left {
+  left:auto;
+  right:20px;
+}
+.leaflet-bar, .leaflet-touch .leaflet-bar {
+  border-radius:0;
+  border:none;
+  box-shadow: none;
+}
+.leaflet-bar-part, .leaflet-touch .leaflet-bar-part {
+background-color: rgba(201, 201, 201, 0.8);
+}
+
+.leaflet-control-zoom.leaflet-bar.leaflet-control a, .leaflet-touch .leaflet-bar .leaflet-control-zoom a {
+width: 37px;
+height: 37px;
+margin: 5px;
+line-height: 37px;
+border-radius: 50%;
+border: none;
+color: rgba(201, 201, 201, 1);
+font-family: initial;
+font-size: 24px;
+}
+
+.leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-control-zoom {
+  border:none;
+}
+
+.leaflet-touch .leaflet-bar-part-top {
+  border-radius:0;
+  border-bottom: none
+}
+
+#wrapperViewHelp {
+    display: none;
+    background-color:rgba(0,0,0,0.5);
+    z-index:1001;
+}
+
+#viewHelp {
+
+    width: 500px;
+    height: 340px;
+    background-color: #FFF;
+    font-size: 12px;
+    padding: 10px 15px 15px;
+    
+    h3, p {
+    
+        margin: .5em 0;
+    }
+}
+
+#viewHelpTrigger {
+
+    padding: 0 0 0 5px;
+    float:left;
+    width:12px;
+    height:12px;
+}
+
+#viewHelpClose {
+
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+}
+
+#viewHelpCluster, #viewHelpClusterText {
+
+    float:left;
+
+}
+
+#viewHelpCluster {
+    padding-top: 15px;
+}
+
+#viewHelpClusterText {
+    width: 330px;
+margin: 0 10px;
+}
+    
+@import "header";
+@import "footer";
+@import "clusters";
+@import "control-panel";
+@import "infobox";
+@import "listview";
+@import "download-btn";
