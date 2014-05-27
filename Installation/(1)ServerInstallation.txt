@@ -20,7 +20,7 @@ sudo su postgres
 
 psql
 
-alter user postgres with password 'D4t4W4r3#';
+alter user postgres with password 'password';
 
 \q
 exit
@@ -42,9 +42,11 @@ host    all             all             0.0.0.0/0               md5
 -- change the data directory
 mkdir -p /DATA/postgresqldata
 sudo chown -R postgres:postgres /DATA/postgresqldata
-su postgres
+sudo su postgres
 
 /usr/lib/postgresql/9.3/bin/initdb -D /DATA/postgresqldata
+
+exit
 
 sudo pico /etc/postgresql/9.3/main/postgresql.conf
 -- change
@@ -53,7 +55,10 @@ data_directory = '/DATA/postgresqldata/'
 sudo /etc/init.d/postgresql start
 sudo su postgres
 psql -d postgres -U postgres
-SHOW data_directory
+SHOW data_directory;
+
+\q
+exit
 
 
 /*************************************************************
@@ -70,5 +75,13 @@ sudo /etc/init.d/apache2 restart
 sudo pico /etc/php5/apache2/php.ini
 -- Set "session.cookie_httponly"  option to "True"
 -- session.cookie_httponly = True;
+
+sudo /etc/init.d/apache2 restart
+
+-- add user that is publishing application to server
+sudo chgrp www-data /var/www
+sudo chmod 775 /var/www
+sudo chmod g+s /var/www
+sudo useradd -G www-data [username]
 
 sudo /etc/init.d/apache2 restart
