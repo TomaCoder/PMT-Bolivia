@@ -182,9 +182,9 @@ RETURNS trigger AS $upd_datos_sisin$
         EXECUTE 'INSERT INTO activity_taxonomy(activity_id, classification_id, field) VALUES( ' || a_id || ', ' || c_id || ', ''activity_id'');';
       END IF;
     END IF;
-    -- Municiple
+    -- Municipio
     IF NEW.mun IS NOT NULL THEN
-      SELECT INTO c_id classification_id FROM taxonomy_classifications WHERE taxonomy = 'Municiple' AND lower(classification) = lower(NEW.mun);
+      SELECT INTO c_id classification_id FROM taxonomy_classifications WHERE taxonomy = 'Municipio' AND lower(classification) = lower(NEW.mun);
       IF c_id IS NOT NULL THEN
         EXECUTE 'SELECT count(*) FROM activity_taxonomy WHERE activity_id = ' || a_id || ' AND classification_id = ' || c_id || ' AND field = ''activity_id''' INTO rec_count;
         IF rec_count = 0 THEN
@@ -193,7 +193,7 @@ RETURNS trigger AS $upd_datos_sisin$
 	END IF;
       ELSE
         -- add the classification to the taxonomy
-        EXECUTE 'INSERT INTO classification(taxonomy_id, name, created_by, updated_by) VALUES ((SELECT taxonomy_id FROM taxonomy WHERE name = ' || quote_literal('Municiple') || 
+        EXECUTE 'INSERT INTO classification(taxonomy_id, name, created_by, updated_by) VALUES ((SELECT taxonomy_id FROM taxonomy WHERE name = ' || quote_literal('Municipio') || 
         '),'|| coalesce(quote_literal(trim(substring(NEW.mun from 1 for 255))),'NULL') || ', ' || quote_literal(E'importar_datos_sisin') || ', ' ||	quote_literal(E'importar_datos_sisin') 
         || ') RETURNING classification_id;' INTO c_id;
         EXECUTE 'INSERT INTO activity_taxonomy(activity_id, classification_id, field) VALUES( ' || a_id || ', ' || c_id || ', ''activity_id'');';

@@ -1,7 +1,7 @@
 /******************************************************************
    bolivia_activity
 
-   select * from bolivia_activity(28899);  
+   select * from bolivia_activity(32036);     
 ******************************************************************/
 CREATE OR REPLACE FUNCTION bolivia_activity(activity_id integer) RETURNS SETOF pmt_json_result_type AS 
 $$
@@ -65,11 +65,11 @@ BEGIN
 			  -- 'ON at.classification_id = tc.classification_id ' ||
 			  -- 'WHERE activity_id = a.activity_id AND taxonomy = ''Provincia'') ' ||
 			  -- mun
-			  -- ',(SELECT array_to_string(array_agg(classification), '','') as "Municipio" ' ||
-			  -- 'FROM activity_taxonomy at ' ||
-			  -- 'JOIN taxonomy_classifications tc ' ||
-			  -- 'ON at.classification_id = tc.classification_id ' ||
-			  -- 'WHERE activity_id = a.activity_id AND taxonomy = ''Municipio'') ' ||
+			  ',(SELECT array_to_string(array_agg(classification), '','') as "Municipio" ' ||
+			  'FROM activity_taxonomy at ' ||
+			  'JOIN taxonomy_classifications tc ' ||
+			  'ON at.classification_id = tc.classification_id ' ||
+			  'WHERE activity_id = a.activity_id AND taxonomy = ''Municipio'') ' ||
 			  -- location
 			  -- ',(SELECT count(location_id) as "Número de Ubicaciones" ' ||
 			  -- 'FROM location ' ||
