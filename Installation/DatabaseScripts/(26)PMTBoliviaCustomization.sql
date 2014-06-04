@@ -1,7 +1,7 @@
 /******************************************************************
    bolivia_activity
 
-   select * from bolivia_activity(1);
+   select * from bolivia_activity(32036);     
 ******************************************************************/
 CREATE OR REPLACE FUNCTION bolivia_activity(activity_id integer) RETURNS SETOF pmt_json_result_type AS 
 $$
@@ -59,11 +59,11 @@ BEGIN
 			  'ON at.classification_id = tc.classification_id ' ||
 			  'WHERE activity_id = a.activity_id AND taxonomy = ''Departamento'') ' ||
 			  -- prov
-			  ',(SELECT array_to_string(array_agg(classification), '','') as "Provincia" ' ||
-			  'FROM activity_taxonomy at ' ||
-			  'JOIN taxonomy_classifications tc ' ||
-			  'ON at.classification_id = tc.classification_id ' ||
-			  'WHERE activity_id = a.activity_id AND taxonomy = ''Provincia'') ' ||
+			  -- ',(SELECT array_to_string(array_agg(classification), '','') as "Provincia" ' ||
+			  -- 'FROM activity_taxonomy at ' ||
+			  -- 'JOIN taxonomy_classifications tc ' ||
+			  -- 'ON at.classification_id = tc.classification_id ' ||
+			  -- 'WHERE activity_id = a.activity_id AND taxonomy = ''Provincia'') ' ||
 			  -- mun
 			  ',(SELECT array_to_string(array_agg(classification), '','') as "Municipio" ' ||
 			  'FROM activity_taxonomy at ' ||
@@ -71,9 +71,9 @@ BEGIN
 			  'ON at.classification_id = tc.classification_id ' ||
 			  'WHERE activity_id = a.activity_id AND taxonomy = ''Municipio'') ' ||
 			  -- location
-			  ',(SELECT count(location_id) as "Número de Ubicaciones" ' ||
-			  'FROM location ' ||
-			  'WHERE activity_id = a.activity_id) ' ||
+			  -- ',(SELECT count(location_id) as "Número de Ubicaciones" ' ||
+			  -- 'FROM location ' ||
+			  -- 'WHERE activity_id = a.activity_id) ' ||
 			  -- costo_total
 			  ',(SELECT cast(coalesce(sum(amount), 0.00) as text) || '' BS'' as "Costo Total" ' ||
 			  'FROM financial f ' ||
@@ -83,43 +83,43 @@ BEGIN
 			  'ON ft.classification_id = tc.classification_id ' ||
 			  'WHERE activity_id = a.activity_id AND taxonomy = ''Tipo Presupuesto'' AND classification = ''Costo Total'') ' ||
 			  -- fte
-			  ',(SELECT array_to_string(array_agg(classification), '','') as "FTE" ' ||
-			  'FROM activity_taxonomy at ' ||
-			  'JOIN taxonomy_classifications tc ' ||
-			  'ON at.classification_id = tc.classification_id ' ||
-			  'WHERE activity_id = a.activity_id AND taxonomy = ''FTE'') ' ||
+			  -- ',(SELECT array_to_string(array_agg(classification), '','') as "FTE" ' ||
+			  -- 'FROM activity_taxonomy at ' ||
+			  -- 'JOIN taxonomy_classifications tc ' ||
+			  -- 'ON at.classification_id = tc.classification_id ' ||
+			  -- 'WHERE activity_id = a.activity_id AND taxonomy = ''FTE'') ' ||
 			  -- org
-			  ',(SELECT array_to_string(array_agg(o.name), '','') as "Financiador" ' ||
-			  'FROM participation p ' ||
-			  'JOIN organization o ' ||
-			  'ON p.organization_id = o.organization_id ' ||
-			  'JOIN participation_taxonomy pt ' ||
-			  'ON p.participation_id = pt.participation_id ' ||
-			  'JOIN taxonomy_classifications tc ' ||
-			  'ON pt.classification_id = tc.classification_id ' ||
-			  'WHERE activity_id = a.activity_id AND taxonomy = ''Organisation Role'' AND iati_name = ''Funding'') ' ||
+			  -- ',(SELECT array_to_string(array_agg(o.name), '','') as "Financiador" ' ||
+			  -- 'FROM participation p ' ||
+			  -- 'JOIN organization o ' ||
+			  -- 'ON p.organization_id = o.organization_id ' ||
+			  -- 'JOIN participation_taxonomy pt ' ||
+			  -- 'ON p.participation_id = pt.participation_id ' ||
+			  -- 'JOIN taxonomy_classifications tc ' ||
+			  -- 'ON pt.classification_id = tc.classification_id ' ||
+			  -- 'WHERE activity_id = a.activity_id AND taxonomy = ''Organisation Role'' AND iati_name = ''Funding'') ' ||
 			  -- convenio
-			  ',(SELECT array_to_string(array_agg(classification), '','') as "Convenio" ' ||
-			  'FROM activity_taxonomy at ' ||
-			  'JOIN taxonomy_classifications tc ' ||
-			  'ON at.classification_id = tc.classification_id ' ||
-			  'WHERE activity_id = a.activity_id AND taxonomy = ''Convenio'') ' ||
+			  -- ',(SELECT array_to_string(array_agg(classification), '','') as "Convenio" ' ||
+			  -- 'FROM activity_taxonomy at ' ||
+			  -- 'JOIN taxonomy_classifications tc ' ||
+			  -- 'ON at.classification_id = tc.classification_id ' ||
+			  -- 'WHERE activity_id = a.activity_id AND taxonomy = ''Convenio'') ' ||
 			  -- presupuestado
-			  ',(SELECT cast(coalesce(sum(amount), 0.00) as text) || '' BS'' as "Presupuestado" ' ||
-			  'FROM financial f ' ||
-			  'JOIN financial_taxonomy ft ' ||
-			  'ON f.financial_id = ft.financial_id ' ||
-			  'JOIN taxonomy_classifications tc ' ||
-			  'ON ft.classification_id = tc.classification_id ' ||
-			  'WHERE activity_id = a.activity_id AND taxonomy = ''Tipo Presupuesto'' AND classification = ''Presupuesto'') ' ||
+			  -- ',(SELECT cast(coalesce(sum(amount), 0.00) as text) || '' BS'' as "Presupuestado" ' ||
+			  -- 'FROM financial f ' ||
+			  -- 'JOIN financial_taxonomy ft ' ||
+			  -- 'ON f.financial_id = ft.financial_id ' ||
+			  -- 'JOIN taxonomy_classifications tc ' ||
+			  -- 'ON ft.classification_id = tc.classification_id ' ||
+			  -- 'WHERE activity_id = a.activity_id AND taxonomy = ''Tipo Presupuesto'' AND classification = ''Presupuesto'') ' ||
 			  -- ejecutado
-			  ',(SELECT cast(coalesce(sum(amount), 0.00) as text) || '' BS'' as "Ejecutado" ' ||
-			  'FROM financial f ' ||
-			  'JOIN financial_taxonomy ft ' ||
-			  'ON f.financial_id = ft.financial_id ' ||
-			  'JOIN taxonomy_classifications tc ' ||
-			  'ON ft.classification_id = tc.classification_id ' ||
-			  'WHERE activity_id = a.activity_id AND taxonomy = ''Tipo Presupuesto'' AND classification = ''Ejecutado'') ' ||
+			  -- ',(SELECT cast(coalesce(sum(amount), 0.00) as text) || '' BS'' as "Ejecutado" ' ||
+			  -- 'FROM financial f ' ||
+			  -- 'JOIN financial_taxonomy ft ' ||
+			  -- 'ON f.financial_id = ft.financial_id ' ||
+			  -- 'JOIN taxonomy_classifications tc ' ||
+			  -- 'ON ft.classification_id = tc.classification_id ' ||
+			  -- 'WHERE activity_id = a.activity_id AND taxonomy = ''Tipo Presupuesto'' AND classification = ''Ejecutado'') ' ||
 			 'FROM activity a ' ||
 			 'WHERE a.activity_id =' || $1;
     
