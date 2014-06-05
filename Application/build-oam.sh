@@ -12,7 +12,7 @@ where:
     <pem file> : path to pem file (if necessary)
     -h : show this help text
 
-example: ./build-oam.sh ./ ../oam-public-build stage ../wbkey.pem"
+example: ./build-oam.sh ./ ../oam-public-build prod ../wbkey.pem"
 
 while getopts ':hs:' option; do
   case "$option" in
@@ -41,7 +41,8 @@ fi
 
 
 # Export from git repo and stuff into the build directory
-(cd $1 && git archive HEAD) | (cd $2 && tar -xf -)
+#(cd $1 && git archive HEAD) | (cd $2 && tar -xf -)
+(cd $1 && tar cf oam-public-build.tar ./* && mv oam-public-build.tar ../oam-public-build.tar) | (cd $2 && tar -xf -)
 
 echo "Exported from git repo."
 
